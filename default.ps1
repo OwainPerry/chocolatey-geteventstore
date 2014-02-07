@@ -1,9 +1,9 @@
 properties {
 	#If you want to inc the version number 
-	$buildNumber = $env:GO_PIPELINE_LABEL
+	$buildNumber = $env:build
   	if($buildNumber -eq $null)
   	{
-    	$buildNumber = "0"
+    	$buildNumber = "1"
   	}    	
 		
 	#Should not need to change these 
@@ -56,7 +56,7 @@ task Push {
 	}
 	else
 	{
-		write-host "not pushing, this should be done by go"
+		write-host "not pushing, this should be done by CI"
 	}	
 }
 
