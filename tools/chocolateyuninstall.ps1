@@ -1,8 +1,7 @@
+$name = "geteventstore"
 try {
 
   & c:\apps\geteventstore\EventStoreService.exe uninstall
-
-  taskkill /s srvmain /f /im EventStore.SingleNode.exe 
 
   rmdir -force -recurse c:\apps\geteventstore
 

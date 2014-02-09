@@ -1,6 +1,4 @@
 try {
-  # just a simple xcopy install for now. 
-
 
   if ($env:ChocolateyInstall -eq $null)
   {
@@ -14,11 +12,14 @@ try {
   }
 
   Install-ChocolateyZipPackage 'geteventstore' 'http://download.geteventstore.com/binaries/eventstore-net-2.0.1.zip' "c:\apps\geteventstore"
- 
+  $from = $(Split-Path -parent $MyInvocation.MyCommand.Definition) + "\..\data\*.*"
+
   #Copy the service wrapper to the same folder 
-  copy $(Split-Path -parent $MyInvocation.MyCommand.Definition) + "\..\data\*.*" "c:\apps\geteventstore"
+  copy -Path $from -Destination "c:\apps\geteventstore\"
 
   & c:\apps\geteventstore\EventStoreService.exe install
+
+ echo $null >EventStoreService.exe.ignore
 
  IF ($LASTEXITCODE -ne 0)
   {
