@@ -7,11 +7,10 @@
     <authors>owain perry</authors>
     <owners>geteventstore</owners>
     <summary>geteventstore</summary>
-    <description>get event store windows .net version</description>
+    <description>get event store windows .net version with windows service wrapper</description>
     <projectUrl>http://www.geteventstore.com</projectUrl>
-    <tags>geteventstore</tags>
-    <copyright>
-    </copyright>
+    <tags>geteventstore eventstore event store</tags>
+    <copyright></copyright>
     <licenseUrl>http://www.geteventstore.com</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>
